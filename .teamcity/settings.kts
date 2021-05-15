@@ -97,7 +97,7 @@ object Backend_TryActiveMq : BuildType({
         vcs {
         }
         finishBuildTrigger {
-            enabled = false
+            enabled = true
             buildType = "${Backend_BuildBackEnd.id}"
             branchFilter = """
                 +:<default>
