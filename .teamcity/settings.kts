@@ -108,9 +108,10 @@ object Backend_TryActiveMq : BuildType({
 
     dependencies {
         artifacts(Backend_BuildBackEnd) {
-            buildRule = lastSuccessful()
+            buildRule = sameChainOrLastFinished()
             artifactRules = "employee-rest-service-0.0.1-SNAPSHOT.jar"
             enabled = true
         }
+        snapshot(Backend_BuildBackEnd) {}
     }
 })
