@@ -114,4 +114,10 @@ object Backend_TryActiveMq : BuildType({
         }
         snapshot(Backend_BuildBackEnd) {}
     }
+
+    val systems = arrayOf("Mac", "Windows", "Linux")
+
+    systems.forEach {
+        MyBaseTest("Test $it", "discription $it")
+    }
 })
