@@ -110,7 +110,7 @@ object Backend_TryActiveMq : BuildType({
         artifacts(Backend_BuildBackEnd) {
             buildRule = lastSuccessful()
             artifactRules = "employee-rest-service-0.0.1-SNAPSHOT.jar"
-            enabled = false
+            enabled = true
         }
     }
 })
