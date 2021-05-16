@@ -30,14 +30,14 @@ object Backend_TryActiveMq : BuildType({
     triggers {
         vcs {
         }
-        //finishBuildTrigger {
-            //enabled = true
-            //buildType = "${Settings.Backend_BuildBackEnd.id}"
-            //branchFilter = """
-                //+:<default>
-                //+:feature/*
-            //""".trimIndent()
-        //}
+        finishBuildTrigger {
+            enabled = true
+            buildType = "${Settings.Backend_BuildBackEnd.id}"
+            branchFilter = """
+                +:<default>
+                +:feature/*
+            """.trimIndent()
+        }
     }
 
     dependencies {
